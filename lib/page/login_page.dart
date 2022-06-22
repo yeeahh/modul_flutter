@@ -12,7 +12,10 @@ class LoginPage extends StatelessWidget {
             Text("Halo"),
             GestureDetector(
               onTap: () => onGestureTap(context),
-            )
+            ),
+            GestureDetector(
+              onTap: () => onGesturePressed(context, 'aku', 2),
+            ),
           ],
         ),
       ),
@@ -20,4 +23,7 @@ class LoginPage extends StatelessWidget {
   }
 
   void onGestureTap(BuildContext context) => print('onGestureTap');
+
+  void onGesturePressed(BuildContext context, String a, int b) =>
+      print('onGesturePressed');
 }
