@@ -7,8 +7,17 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text("Halo"),
+        child: Row(
+          children: [
+            Text("Halo"),
+            GestureDetector(
+              onTap: () => onGestureTap(context),
+            )
+          ],
+        ),
       ),
     );
   }
+
+  void onGestureTap(BuildContext context) => print('onGestureTap');
 }
