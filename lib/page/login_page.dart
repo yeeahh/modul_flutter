@@ -6,24 +6,27 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Row(
-          children: [
-            Text("Halo"),
-            GestureDetector(
-              onTap: () => onGestureTap(context),
-            ),
-            GestureDetector(
-              onTap: () => onGesturePressed(context, 'aku', 2),
-            ),
-          ],
-        ),
+      body: buildBody(context),
+    );
+  }
+
+  Widget buildBody(BuildContext context) {
+    return Container(
+      child: Row(
+        children: [
+          Text("Halo"),
+          GestureDetector(
+            onTap: () => onGestureTap(context),
+          ),
+          GestureDetector(
+            onTap: () => onGesturePressed(context),
+          ),
+        ],
       ),
     );
   }
 
   void onGestureTap(BuildContext context) => print('onGestureTap');
 
-  void onGesturePressed(BuildContext context, String a, int b) =>
-      print('onGesturePressed');
+  void onGesturePressed(BuildContext context) => print('onGesturePressed');
 }
